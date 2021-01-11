@@ -3,6 +3,7 @@
 `docker-compose build`
 
 ## Start the SeedmeLab Quickstart Drupal site
+Once the container boots up, the Drupal site will be accessible on `http://localhost:8080`
 `docker-compose up seedmelab`
 
 ### Only run the below line the first time the seedmelab quickstart is created
