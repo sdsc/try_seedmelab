@@ -19,7 +19,7 @@ ENV DB_PASS=$DB_PASS
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update -y && apt upgrade -y && apt-get install -y curl vim zip unzip git wget
+RUN apt update -y && apt upgrade -y && apt-get install -y curl vim zip unzip git wget cron
 
 # Install PHP
 ADD scripts/build/install_php.sh /scripts/build/install_php.sh
@@ -69,6 +69,10 @@ RUN chmod +x /entrypoint.sh
 
 ADD scripts/install /scripts/install
 RUN chmod +x /scripts/install/*.sh
+
+# Configure cron
+ADD conf/drush.crontab /var/drush.crontab
+RUN crontab /var/drush.crontab
 
 WORKDIR $DRUPAL_SITE_DIR
 ENTRYPOINT /entrypoint.sh

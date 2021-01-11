@@ -29,4 +29,9 @@ start_web_server() {
   fi
 }
 
+start_cron() {
+  cron -f
+}
+
+start_cron
 start_web_server

@@ -1,0 +1,1 @@
+*/5 * * * * cd $DRUPAL_SITE_DIR && drush cron

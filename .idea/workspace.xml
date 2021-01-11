@@ -18,7 +18,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/seedmelab/scripts/install" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/seedmelab/scripts/build" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -27,6 +27,7 @@
       <recent name="$PROJECT_DIR$/seedmelab/scripts/build" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/seedmelab/scripts/build" />
       <recent name="$PROJECT_DIR$/seedmelab/scripts/install" />
       <recent name="$PROJECT_DIR$/seedmelab/scripts" />
       <recent name="$PROJECT_DIR$" />
@@ -42,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610344817010</updated>
       <workItem from="1610344818309" duration="1324000" />
-      <workItem from="1610346278320" duration="12151000" />
+      <workItem from="1610346278320" duration="13266000" />
     </task>
     <servers />
   </component>
@@ -50,6 +51,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="544" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610360433611">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="544" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1610360433611" />
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610345017571">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
