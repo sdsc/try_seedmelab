@@ -33,5 +33,4 @@ start_cron() {
   cron
 }
 
-#start_cron && start_web_server
-start_web_server
+start_cron && start_web_server

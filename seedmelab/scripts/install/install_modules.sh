@@ -1,22 +1,22 @@
 cd $DRUPAL_SITE_DIR
 
-configure_foldershare() {
-  drush en token restui admin_toolbar --yes
-  drush en foldershare foldershare_rest formatter_suite chart_suite --yes
+install_contrib_modules() {
+  drush pm:enable token restui admin_toolbar --yes
+  drush pm:enable foldershare foldershare_rest formatter_suite chart_suite --yes
 
   # Set foldershare settings
   drush config:set foldershare.settings file_scheme private --yes
 
    # Set foldershare permissions for roles
-  drush role-add-perm 'authenticated' 'author foldershare' --yes
-  drush role-add-perm 'authenticated' 'share foldershare' --yes
-  drush role-add-perm 'authenticated' 'share public foldershare' --yes
-  drush role-add-perm 'authenticated' 'view foldershare' --yes
-  drush role-add-perm 'anonymous' 'view foldershare' --yes
+  drush role:perm:add 'authenticated' 'author foldershare' --yes
+  drush role:perm:add 'authenticated' 'share foldershare' --yes
+  drush role:perm:add 'authenticated' 'share public foldershare' --yes
+  drush role:perm:add 'authenticated' 'view foldershare' --yes
+  drush role:perm:add 'anonymous' 'view foldershare' --yes
 }
 
-configure_modules() {
-  drush en \
+install_core_modules() {
+  drush pm:enable \
     automated_cron \
     ban \
     big_pipe \
@@ -55,10 +55,9 @@ configure_modules() {
     views_ui --yes
 }
 
-echo "Enabling core modules..."
-configure_modules
+echo "Installing core modules..."
+install_core_modules
 
-# Configure foldershare
-echo "Configuring foldeshare & foldershare_rest..."
-configure_foldershare
+echo "Installing contrib modules..."
+install_contrib_modules
 

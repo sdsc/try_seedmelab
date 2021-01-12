@@ -26,6 +26,7 @@ ADD scripts/build/install_php.sh /scripts/build/install_php.sh
 RUN chmod +x /scripts/build/*.sh
 RUN /scripts/build/install_php.sh
 
+# TODO: Change the way ini files are included (see chrome tab notes)
 ADD conf/php.ini /etc/php/$PHP_VERSION/fpm/php.ini
 
 # Install Composer
